@@ -1,0 +1,15 @@
+*.pyc
+__pycache__/
+wandb/
+.env
+*.aml*
+.ipynb_aml*
+venv
+plot_outputs/
+dev/wandb_key
+dev/hugging_token
+dev/databricks_key
+data/
+graph.png
+responses.txt
+mlruns/
