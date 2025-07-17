@@ -1,0 +1,20 @@
+  prompt_keywords_path: hendrycks_math/prompts/ifg_prompt_math.txt 
+  num_attempts: 8 
+  model_type: base
+  model: Qwen/Qwen2.5-7B
+  temperature_even_index: -1 # Will be overridden by sweeper script.
+  temperature_odd_index: -1 # Will be overridden by sweeper script.
+  dataset:  JeremiahZ/hendrycks_math_merged 
+  split: train
+  num_problems: 512 
+  separator: "###"
+  solution_end: "\\boxed{"
+  seed: 42
+  max_steps: 20 
+  max_tokens_per_step: 500
+  engine: gllm
+  gllm_host: http://localhost:8181
+  gllm_load_model: true
+  evaluator: math 
+  num_workers: 256
+  log_every: 20

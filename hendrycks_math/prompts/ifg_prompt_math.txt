@@ -1,0 +1,48 @@
+The following are maths questions and their step by step solutions. Each step starts with intent that describes the intent followed by a ### as a separator followed by the actual step. The final answer is enclosed in \boxed{{}}. Each of the different questions is separated by ===.
+
+Question: If $g(x)=\sqrt[3]{{\frac{{x+3}}{{4}}}}$, for what value of $x$ will $g(2x)=2(g(x))$? Express your answer in simplest form.
+Solution: 
+### Substitute and equate ### Since $g(x)=\sqrt[3]{{\frac{{x+3}}{{4}}}}$, we know that $g(2x)=\sqrt[3]{{\frac{{2x+3}}{{4}}}}$. Similarly, we see that $2(g(x))=2\sqrt[3]{{\frac{{x+3}}{{4}}}}$. This gives us the equation \begin{{align*}} \sqrt[3]{{\frac{{2x+3}}{{4}}}}&=2\sqrt[3]{{\frac{{x+3}}{{4}}}}
+### Cube both sides ### \\\Rightarrow\qquad\left(\sqrt[3]{{\frac{{2x+3}}{{4}}}}\right)^3&=\left(2\sqrt[3]{{\frac{{x+3}}{{4}}}}\right)^3
+### Simplify powers ### \\\Rightarrow\qquad \frac{{2x+3}}{{4}}&=\frac{{8(x+3)}}{{4}}
+### Distribute multiplication ### \\\Rightarrow\qquad\frac{{2x+3}}{{4}}&=\frac{{8x+24}}{{4}}
+### Multiply out denominator ### \\\Rightarrow\qquad 2x+3&=8x+24
+### Rearrange terms ###\\\Rightarrow\qquad-6x&=21
+### Final answer ### \\\Rightarrow\qquad x&=\boxed{{-\frac{{7}}{{2}}}}
+\end{{align*}}
+===
+###
+Question: How many three-digit numbers are multiples of neither 5 nor 7?
+Solution: 
+### Invert the objective ### It's easy to count the number of three-digit numbers which are multiples of 5 or 7.
+### Compute smallest multiple of 7 ### the smallest multiple of 7 which is a three-digit number is $15 \times 7 = 105$
+### Compute largest multiple of 7 ### the largest multiple of 7 that is a three-digit number is $142 \times 7 = 994$.
+### Count number of multiples of 7 ### Therefore, there are $142-15+1 = 128$ three-digit numbers that are multiples of 7.
+### Compute the smallest multiple of 5### The smallest multiple of 5 that is a three-digit number is $20\times 5 = 100$
+### Compute the largest multiple of 5 ### the largest multiple of 5 that is a three digit number is $199\times 5 =995$. 
+### Count number of multiple of 5 #### So there are $199-20+1=180$ multiples of 5.
+### Count ### Now notice that we have counted some numbers twice: those multiples of $5\times7=35$. The smallest multiple of 35 is $3\times 35 = 105$, the largest multiple of 35 is $28\times35 =980$. So there are $28-3+1=26$ multiples of 35.
+
+We have 128 multiples of 7 and 180 multiples of 5, but we count 26 multiples twice.  So, there are a total of $128+180-26 = 282$ distinct three-digit numbers that are multiples of 5 or 7 (or both).   There are 900 three-digit numbers in total (from 100 to 999), so there are $900-282=\boxed{{618}}$ three-digit numbers that are not multiples of 7 nor 5.
+###
+Question: Given that $\sec x + \tan x = \frac{{4}}{{3}},$ enter all possible values of $\sin x.$
+Solution: 
+### Rewrite in terms of sin and cos ### We can re-write the given equation as $\frac{{1}}{{\cos x}} + \frac{{\sin x}}{{\cos x}} = \frac{{4}}{{3}},$ 
+### Multiply by denominator ### \[3 + 3 \sin x = 4 \cos x.\]
+### Square both sides ### \[9 + 18 \sin x + 9 \sin^2 x = 16 \cos^2 x\]
+### Rewrite in terms of sin ### \[9 + 18 \sin x + 9 \sin^2 x   = 16 (1 - \sin^2 x).\]
+### Write in standard quadratic form ### Then $25 \sin^2 x + 18 \sin x - 7 = 0,$
+### Factorise and solve for sin ### factors as $(\sin x + 1)(25 \sin x - 7) = 0.$  Hence, $\sin x = -1$ or $\sin x = \frac{{7}}{{25}}.$
+### Check solutions are valid ### If $\sin x = -1,$ then $\cos^2 x = 1 - \sin^2 x = 0,$ so $\cos x = 0.$  But this makes $\sec x$ and $\tan x$ undefined.  
+### Final answer ###So the only possible value of $\sin x$ is $\boxed{{\frac{{7}}{{25}}}}.$
+===
+###
+Question: A fair 6-sided die is rolled.  What is the probability that the number rolled is a divisor of 6?
+Solution: 
+### Count divisors of 6 ### There are 4 divisors of 6, namely $1,2,3,6$.  
+### Divide by number of all outcomes ### So the answer is $\dfrac46=\boxed{{\dfrac23}}$.
+===
+###
+Question: {question}
+Solution:
+### 

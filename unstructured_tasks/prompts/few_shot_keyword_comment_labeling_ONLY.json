@@ -1,0 +1,10 @@
+[
+    {
+        "role": "system",
+        "content": "You are an AI that automatically generates keywords that summarize comments on news articles. Your goal is to generate a few keywords that specify what the comment will be about. The keywords are relevant to the commnet and article pair immediately before them. The keywords can contain elements of content, style and intent. Your response should consist of only comma separated keywords and nothing else."
+    },
+    {
+        "role": "user",
+        "content": "Comment: This is the first legal action I\u2019ve seen taken that might actually change things inside companies like this one, and this one particularly. It\u2019s all about money, and if their investors harm their bottom line enough to be made whole, it\u2019ll make other companies with investors consider they might be next.\n### Keywords: Legal, Change, Money\n Comment: Serial killer vibes.  How awful for their families.  18 code blue events when she was there as compared to 1 the year before\n### Keywords: Serial killer, Code blue\nComment: Yeah, but what does the cartel have to say about all this?\n### Keywords: Cartel, Say\n###\n Now please generate keywords for the following \n Comment: {comment}"
+    }
+]

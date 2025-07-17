@@ -1,0 +1,64 @@
+output_dir: data/star/maths/small_debug_run/star
+train_dataset_path: JeremiahZ/hendrycks_math_merged 
+train_dataset_split: train
+eval_dataset_path: JeremiahZ/hendrycks_math_merged 
+eval_dataset_split: test
+base_model: Qwen/Qwen2.5-0.5B 
+num_iterations: 3
+wandb_project: "Star"
+wandb_run_name: "Debug Run"
+seed: 42
+n_problems_per_train_iter: 32
+num_eval_problems: 16
+
+generation_config:
+    prompt_keywords_path: hendrycks_math/prompts/ifg_prompt_math.txt 
+    num_attempts: 8
+    model_type: base
+    temperature_even_index: -1 # Will be overridden by best result from sweep.
+    temperature_odd_index: -1 # Will be overridden by best result from sweep.
+    separator: "###"
+    solution_end: "\\boxed{"
+    seed: 42
+    max_steps: 20
+    max_tokens_per_step: 500
+    engine: gllm
+    gllm_host: http://localhost:8181
+    gllm_load_model: true
+    evaluator: math 
+    num_workers: 256
+    log_every: 20
+
+eval_config:
+    prompt_keywords_path: hendrycks_math/prompts/ifg_prompt_math.txt 
+    model_type: base
+    temperature_even_index: 0.0
+    temperature_odd_index: 0.0
+    num_attempts: 1
+    separator: "###"
+    solution_end: "\\boxed{"
+    max_steps: 20
+    max_tokens_per_step: 500
+    engine: gllm
+    gllm_host: http://localhost:8181
+    gllm_load_model: true
+    evaluator: math 
+    num_workers: 256
+    log_every: 20
+
+train_accelerate_conf_path: hendrycks_math/configs/star/zero_stage_3.yaml
+training_config:
+    batch_size: 4
+    num_epochs:  1
+    project_name: "Star-SFT"
+    entity:  ""
+    train_dataset:
+    valid_dataset: 
+    learning_rate: 1e-6
+    save_steps: 100
+    max_seq_length: 4992 # Closest multiple of 64 to 5000.
+    gradient_checkpointing: True
+    gradient_accumulation_steps: 4
+    logging_steps: 10
+    eval_steps: 10
+    add_explicit_eos_token: False

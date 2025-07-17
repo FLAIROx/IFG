@@ -1,0 +1,35 @@
+The following are maths questions and their step by step solutions. The questions are separated by ===. The final answer is enclosed in \boxed{{}}. 
+
+Question: If $g(x)=\sqrt[3]{{\frac{{x+3}}{{4}}}}$, for what value of $x$ will $g(2x)=2(g(x))$? Express your answer in simplest form.
+Solution: Since $g(x)=\sqrt[3]{{\frac{{x+3}}{{4}}}}$, we know that $g(2x)=\sqrt[3]{{\frac{{2x+3}}{{4}}}}$. Similarly, we see that $2(g(x))=2\sqrt[3]{{\frac{{x+3}}{{4}}}}$. This gives us the equation \begin{{align*}} \sqrt[3]{{\frac{{2x+3}}{{4}}}}&=2\sqrt[3]{{\frac{{x+3}}{{4}}}}
+\\\Rightarrow\qquad\left(\sqrt[3]{{\frac{{2x+3}}{{4}}}}\right)^3&=\left(2\sqrt[3]{{\frac{{x+3}}{{4}}}}\right)^3
+\\\Rightarrow\qquad \frac{{2x+3}}{{4}}&=\frac{{8(x+3)}}{{4}}
+\\\Rightarrow\qquad\frac{{2x+3}}{{4}}&=\frac{{8x+24}}{{4}}
+\\\Rightarrow\qquad 2x+3&=8x+24
+\\\Rightarrow\qquad-6x&=21
+\\\Rightarrow\qquad x&=\boxed{{-\frac{{7}}{{2}}}}
+\end{{align*}}
+###
+===
+Question: How many three-digit numbers are multiples of neither 5 nor 7?
+Solution: It's easy to count the number of three-digit numbers which are multiples of 5 or 7: the smallest multiple of 7 which is a three-digit number is $15 \times 7 = 105$, and the largest multiple of 7 that is a three-digit number is $142 \times 7 = 994$.  Therefore, there are $142-15+1 = 128$ three-digit numbers that are multiples of 7.  The smallest multiple of 5 that is a three-digit number is $20\times 5 = 100$, and the largest multiple of 5 that is a three digit number is $199\times 5 =995$. So there are $199-20+1=180$ multiples of 5.
+
+Now notice that we have counted some numbers twice: those multiples of $5\times7=35$. The smallest multiple of 35 is $3\times 35 = 105$, the largest multiple of 35 is $28\times35 =980$. So there are $28-3+1=26$ multiples of 35.
+
+We have 128 multiples of 7 and 180 multiples of 5, but we count 26 multiples twice.  So, there are a total of $128+180-26 = 282$ distinct three-digit numbers that are multiples of 5 or 7 (or both).   There are 900 three-digit numbers in total (from 100 to 999), so there are $900-282=\boxed{{618}}$ three-digit numbers that are not multiples of 7 nor 5.
+###
+===
+Question: Given that $\sec x + \tan x = \frac{{4}}{{3}},$ enter all possible values of $\sin x.$
+Solution: We can re-write the given equation as $\frac{{1}}{{\cos x}} + \frac{{\sin x}}{{\cos x}} = \frac{{4}}{{3}},$ so
+\[3 + 3 \sin x = 4 \cos x.\]Squaring both sides, we get
+\[9 + 18 \sin x + 9 \sin^2 x = 16 \cos^2 x = 16 (1 - \sin^2 x).\]Then $25 \sin^2 x + 18 \sin x - 7 = 0,$ which factors as $(\sin x + 1)(25 \sin x - 7) = 0.$  Hence, $\sin x = -1$ or $\sin x = \frac{{7}}{{25}}.$
+
+If $\sin x = -1,$ then $\cos^2 x = 1 - \sin^2 x = 0,$ so $\cos x = 0.$  But this makes $\sec x$ and $\tan x$ undefined.  So the only possible value of $\sin x$ is $\boxed{{\frac{{7}}{{25}}}}.$
+###
+===
+Question: A fair 6-sided die is rolled.  What is the probability that the number rolled is a divisor of 6?
+Solution: There are 4 divisors of 6, namely $1,2,3,6$.  So the answer is $\dfrac46=\boxed{{\dfrac23}}$.
+###
+===
+Question: {question}
+Solution: 

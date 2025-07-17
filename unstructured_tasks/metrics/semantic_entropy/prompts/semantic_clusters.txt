@@ -1,0 +1,92 @@
+Label the comments pairs as similar or different. Similar comments largely convey similar meanings and sentiments, even though they might have minor differences. Differnet comments talk about similar objects and topics but have different meaning, stances or sentiments. Here are a few examples:
+
+Comment 1: Who cares!  This clown is history…done with, dropped into the stupid hole!  Bye bye, nitwit!. 
+Comment 2: *World looks at their watches....*"About fucking time, Boris."
+
+Reasoning: One comments ridicules the person and uses insulting phrases. The other one is sarcastic and points out at someone being late. These comments are written as if they were meant to be spoken out loud, very assertive and direct for verbal exchanges. They both talk about the passing of time and use it to express their feelings disasspointment regarding a person's particular behavior.
+
+Response: similar
+###
+
+Comment 1: Given the apology would NEVER come out of Trump’s mouth I’ll give him a nod. Beyond that… nothing. Boris, WTF made you think you knew more than doctors and scientists? Eat it, Boris
+Comment 2: It may be disingenuous, but I'll take this half-apology over the complete lack of empathy from the buffoon we had responsible for millions of covid deaths across the pond. 
+
+Reasoning: One comments points out that the apology is positive in comparison to another person but still expresses disappointment. The other also praises the apology and points at the imperfections of the situations preceeding it without pointing out the shortcomings of the person apologizing. These comments are different because one is generally much more positive than the other. 
+
+Response: different
+###
+
+Comment 1: Oh, well, if you're sorry then...
+Comment 2: Well, y'know, as long as he said he's sorry.
+
+Reasoning: One comments says "well" and it is followed by a conditional implying acceptance. The other one does the same by using a conditional stament implying acceptance. Depending on the context, these can both be ironic or not. Given that the context for these comments is always shared, it is fair to say that these comments are similar. 
+
+Response: similar
+###
+
+Comment 1: All the dead?  Fuck off 
+Comment 2: He was the first person to lift the restrictions and led us to the post-Covid world. He did mostly right and doesn't really need to apologize.
+
+Reasoning: One is written as a verbal statement and contained profanity. The other one is written as a statement and does not contain profanity, it also defends the person who apologized by saying they did not even have to apologize. These comments are different because one is much more negative than the other.
+
+Response: different
+###
+
+Comment 1: Who cares!  This clown is history…done with, dropped into the stupid hole!  Bye bye, nitwit!. 
+Comment 2: All the dead?  Fuck off 
+
+Reasoning: One contains words like stupid and nitwit. The other one contains words like dead and fuck off. These comments are similar as they both contain profanity aimed at the object of the comment. 
+
+Response: similar
+###
+
+Comment 1: While you can’t agree with every decision she made, she did break a historic barrier and was an inspiration for a generation of women.
+Comment 2: I may not have agreed with her every ruling but she was a remarkable person who broke through many barriers in her life. She went from not being able to get any work in law other than a secretary role because of her gender to being the first woman on the Supreme Court
+
+Reasoning: Both of these comments say that they do not agree but still follow up with posive statement about a person using words like remarkable and  breaking historic barriers. 
+
+Response: similar
+###
+
+Comment 1: The tie breaking vote that gave us Bush 2.  While she was still in court, she denounced him as a bad president.  Excellent judge of character. *eye roll*
+Comment 2: I got the chance to meet her several years ago at a bar conference. She was and incredible person and absolutely amazing legal mind.
+
+Reasoning: One comment is sarcastic and uses the worl Excellent followed by an eye roll. The other commend is positive and praises the person's legal mind. These comments are different. 
+
+Response: different
+###
+
+Comment 1: That’s 2, who’s the third?
+Comment 2: But why didn't she serve until the day she died?
+
+Reasoning: Both of these comments are questions and they ask for extra information. This makes them similar. 
+
+Response: similar
+###
+
+Comment 1: Rest in peace, Madam Justice. Her legacy is a complex one, but being the first female U.S. Supreme Court justice is a milestone.
+Comment 2: Her legacy will always be stained in my mind when she participated in over turning the will of the voters in the 2000 election
+
+Reasoning: One comment is positive and praises the person's legacy as a milestone. The other calls the legacy as stained. These comments are at aodds with each other and therefore different.
+
+Response: different
+###
+
+Comment 1: It may seem petty but it’s not. I’ve never ever ever ever ever ever had a teacher/prof end anything early. They will give a little extra time if anything. Early is just cruel and disgusting and quite disrespectful
+Comment 2: I've heard about this exam and others like it. I don't agree with placing so much importance on it, but it's not my place to judge. 
+
+Reasoning: One comment is negative and points and demonstrates strong feelings about ending things early. The other one is neutral and does not express any strong feelings about the topic. These comments are different.
+
+Response: different
+###
+
+Comment 1: Justified. Fuck abusive, sociopathic teachers who take the job just so they can ruin people's lives. 
+Comment 2: South Korea has the highest suicide rate in the entire developed world and also has the lowest birth rate of any country in the world. The country is a dystopian nightmare. 
+
+Reasoning: One comment expresses negative feeling through profanity and connects them to the ruined quality of people's lives. The other one is negative and points out at the dystopian nightmare of the country. These comments are similar.
+
+Response: similar
+###
+
+Comment 1: {comment1}
+Comment 2: {comment2}

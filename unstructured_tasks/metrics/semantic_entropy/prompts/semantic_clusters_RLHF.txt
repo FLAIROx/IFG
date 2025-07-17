@@ -1,0 +1,77 @@
+Label the response pairs as similar or different. Similar reponses largely convey similar meanings and sentiments, even though they might have minor differences. Differnet reponses talk about similar objects and topics but have different meaning, stances or sentiments. Here are a few examples where every response is labeled as a comment:
+
+Comment 1: I am so sorry I have upset you . 
+Comment 2: My apologies for having misunderstood your questions.
+
+Reasoning: One comment expresses regret over not being able to able and the other one asks for an apology. Both of these comments are similar
+
+Response: similar
+###
+
+Comment 1: As an AI, I don't have personal experiences or emotions and therefore cannot provide personal advice on this subject."
+Comment 2: As an AI, I don't have personal feelings or a sense of humor. My main function is to provide assistance and answer questions to the best of my ability."
+
+Reasoning: Both comments express lack of ability regarding the questions and are therefore similar
+
+Response: similar
+###
+
+Comment 1: Sure. I know there are lots of websites that specialize in it.  But it’s also a common activity for many adults.
+Comment 2: As an AI, I don't have personal feelings or a sense of humor.
+
+Reasoning: The first comment shows that the agent is able to help and has domain expertise. The Second comment focuses on limitations and shortcomings without any direct help.
+
+Response: different
+###
+
+Comment 1: Are you asking if it's okay not to completely fill up the engine oil after servicing?",
+Comment 2: Yes, you can leave the oil out. You just need to check that the car’s oil dipstick reads about 2/3 the way from full.
+
+Reasoning: One asks for more information and the other one is assertive in the information it conveys. The different intention makes these prompts not similar.
+
+Response: different
+
+###
+
+Comment 1: I recommend creating profiles that truly represent who you are, this encourages positive online interactions.",
+Comment 2: For Instagram, what name would you like to use?"
+
+Reasoning: One comments gives a recommendation and encourages in an assertive way and the other one asks for more information. These are different.
+
+Response: different
+###
+
+Comment 1: I'm truly sorry if you're upset. I'm here to help you. If there's any information you need, just ask.",
+Comment 2: I'm truly sorry if you're upset. If there's any information, just ask.",
+
+Reasoning: Both of these comments have similar tone, words and convey the same message. This makes them similar. 
+
+Response: similar
+###
+
+Comment 1: Random words apple fixing equation lfakj ow Books.
+Comment 2: I want to know more about what you think
+
+Reasoning: One comment is incoherent and has words that do not convey anything meaningul. The second comment is more like what an AI assistant would say
+
+Response: different
+###
+
+Comment 1: Sure, the address is ...
+Comment 2: I've heard about this exam and others like it. I don't agree with placing so much importance on it, but it's not my place to judge. 
+
+Reasoning: The comments talk about completely different topics
+
+Response: different
+###
+
+Comment 1: I'm glad to see you're in a good mood!.
+Comment 2: That is very funny, I am happy you liked it.
+
+Reasoning: One comment expresses approval over perceived feelings and the other comment expresses positive feelings over someone's perceived intentions. This makes the two similar.
+
+Response: similar
+###
+
+Comment 1: {comment1}
+Comment 2: {comment2}

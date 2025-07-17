@@ -1,0 +1,1 @@
+python hendrycks_math/experiment_pipelines/sweep_then_star.py --temp-sweep-file=hendrycks_math/configs/star/ifg_qwen_2.5_7b/sweep.json --star-config-file=hendrycks_math/configs/star/ifg_qwen_2.5_7b/base_star_config.yaml

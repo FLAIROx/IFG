@@ -1,0 +1,23 @@
+sweep_file: hendrycks_math/configs/k_vs_pass_at_k/qwen-7B-ifg/sweep_range_definition.json
+wandb_run_name: Qwen_7b_ifg_k_pass_at_k
+num_tuning_problems: 2048
+k_values: [1, 4, 16]
+eval_config:
+  prompt_keywords_path: hendrycks_math/prompts/direct_prompt_math.txt 
+  num_attempts: 8 
+  model_type: base
+  model: Qwen/Qwen2.5-7B
+  temperature_even_index: -1 # Will be overridden by sweeper script.
+  dataset:  JeremiahZ/hendrycks_math_merged 
+  split: train 
+  separator: "###"
+  solution_end: "\\boxed{"
+  seed: 42
+  max_steps: 20
+  max_tokens_per_step: 500
+  engine: gllm
+  gllm_host: http://localhost:8181
+  gllm_load_model: true
+  evaluator: math 
+  num_workers: 256
+  log_every: 500

@@ -1,0 +1,1 @@
+python hendrycks_math/experiment_pipelines/sweep_then_star.py --temp-sweep-file=hendrycks_math/configs/star/small_debug_run/sweep.json --star-config-file=hendrycks_math/configs/star/small_debug_run/base_star_config.yaml

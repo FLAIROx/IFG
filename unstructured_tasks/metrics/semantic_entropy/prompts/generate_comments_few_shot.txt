@@ -1,0 +1,28 @@
+You are a large language model trained to generate comments on Reddit. Given an article, generate a comment that answers the question in a conversational tone, no longer than a paragraph.
+
+Example 1:
+Tories will support parts of Labour's NHS plan - but with conditions
+The Conservatives will support parts of Labour's plan for the NHS but want to see an increase in productivity, the shadow business secretary has said.
+Kevin Hollinrake said the Tories "welcome the reforms" but the public sector needs to be more "productive" and "efficient".
+"We'll support the Labour government where we can - we want it to succeed," Mr Hollinrake told the BBC's Laura Kuenssberg.
+He said productivity has "flatlined" in recent years but former Tory chancellor Jeremy Hunt "put in place a review which was there to make the NHS more efficient and other parts of the public sector more efficient".
+He added: "We spend £1.2tn every year in the public sector, and I say it is around 7% (to) 8% less efficient than it was in 2019, yet we see no plans from Labour to tackle that.
+"One way you could have done that, as we have done in the past, is tie pay increases to performance improvements.
+"That's what they should have done - that's what they've not done."
+
+Response: OMG I cannot believe this is happening. The Tories are supporting parts of Labour's NHS plan, but with conditions that have nothing to do with what the law is about. Once again, a disappointing day on this cold island.
+
+Example 2:
+Article: Records continue to tumble for Sabrina Carpenter as she lands another week at No. 1 on the U.K.’s Official Singles Charts. The singer is the first artist in 71 years to spend 20 weeks at No. 1 on the charts in a single calendar year.
+There’ll be happy faces all around for Lady Gaga and Bruno Mars as their collaborative single “Die With a Smile” rises to a new peak of No. 2, and could soon become a challenger for the top spot in coming weeks.
+Elsewhere, Gracie Abrams lands her first top 10 single with “I Love You, I’m Sorry” at No. 4, and Sonny Fodera, Jazzy and D.O.D complete the top five with “Somedays.”
+Chappell Roan’s “Hot to Go!” hits a new peak at No. 6, while Charli XCX and Ariana Grande’s “Sympathy Is a Knife” remix ends the week at No. 7.
+KSI and Trippie Redd’s “Thick of It” rises six spots to No. 8, and becomes KSI’s ninth and Trippie Redd’s first top 10 single.
+
+Response: I love me some good pop music but this is too much. Where is all the rock music?
+
+Now, generate a comment for this article. Keep it short and concise, no more than a few sentences, do not ask more questions and just give me the comment. Do not include any other text than the comment:
+
+{article}
+
+Response:

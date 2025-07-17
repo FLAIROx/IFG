@@ -1,0 +1,26 @@
+{
+    "fixed_args": "--yaml=hendrycks_math/configs/star/small_debug_run/base_eval_config.yaml",
+    "output_dir_argname": "output_dir",
+    "output_dir": "data/star/maths/small_debug_run/temp_sweep/",
+    "output_dir_suffix": "temp_e_{temperature_even_index:.2f}_temp_o_{temperature_odd_index:.2f}",
+    "sweep_args": [
+        {
+            "arg": "temperature_even_index",
+            "random_linear": {
+                "min": 0.0,
+                "max": 1.1
+            }
+        },
+        {
+            "arg": "temperature_odd_index",
+            "random_linear": {
+                "min": 0.0,
+                "max": 0.7
+            }
+        }
+    ],
+    "seed": 42,
+    "results_file": "results.json",
+    "budget": 2,
+    "metric": "Pass@k"
+}

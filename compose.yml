@@ -1,0 +1,26 @@
+services:
+  ifg:
+    build: 
+      context: .
+      args:
+        UID: ${UID}
+        GID: ${GID}
+    image: ifg:latest 
+    volumes:
+      - ~/.ssh:/project/.ssh:ro
+      - ./data:/project/IFG/data
+      - ~/code:/mount/
+    entrypoint: ["/bin/bash"]
+
+    shm_size: "16gb"
+    stdin_open: true
+    tty: true
+    privileged: true
+    network_mode: "host"
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
