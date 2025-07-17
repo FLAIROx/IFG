@@ -22,7 +22,7 @@ Unleashing the Diversity in Your Language Model</h1>
 Welcome to the repository for [Intent Factored Generation:
 Unleashing the Diversity in Your Language Model](https://arxiv.org/abs/2506.09659)
 
-This repository contains instructions for replicating the experiments on maths, chatbots and news comment generation detailed in Sections 6.1, 6.3, 6.4 of the paper. We link out to our [fork](https://github.com/EltayebAhmed/ifg_lcb) of LiveCodeBench to replicate code experiments detailed in sections 6.2.
+This repository contains instructions for replicating the experiments on maths, chatbots and news comment generation detailed in Sections **6.1**, **6.3**, **6.4** of the [paper](https://arxiv.org/abs/2506.09659). We link out to our [fork](https://github.com/EltayebAhmed/ifg_lcb) of LiveCodeBench to replicate code experiments detailed in sections **6.2**.
 
 <div align="center">
     <img src="IFG_code.gif" alt="Your Company Logo" style="max-width: 50%; height: auto; margin-bottom: 20px;">
@@ -30,13 +30,13 @@ This repository contains instructions for replicating the experiments on maths, 
 
 # Replicating Experiments
 All instructions here assume you run commands from the root directory of the repository.
-All code was tested on python3.11.
+All code was tested on `python3.11`.
 ## Setup
-We provide instructions for setting up environment using python pip but we also supply a docker container for those who would prefer it.
+We provide instructions for setting up environment using `python pip` but we also supply a docker container for those who would prefer it.
 
 ### 1. Using pip
 
-To install using pip, clone the repository and set up the python environment as follows
+To install using `pip`, clone the repository and set up the `python` environment as follows
 ```
 >> git clone https://github.com/FLAIROx/IFG
 >> cd IFG
@@ -61,7 +61,7 @@ Otherwise, you can disable wandb with
 ```
 >> wandb disabled
 ```
-The experiments in Section 6.3 and 6.4 (conversational agents and user comments on news articles) require access to Llama3.1. To run these experiments you must set a huggingface API key with sufficient permissiont to access Llama3.1. This requires agreeing to terms and conditions for Llama3.1 via the huggingface website.
+The experiments in Section **6.3** and **6.4** (conversational agents and user comments on news articles) require access to `Llama3.1`. To run these experiments you must set a huggingface API key with sufficient permissiont to access `Llama3.1`. This requires agreeing to terms and conditions for `Llama3.1` via the Huggingface🤗 website.
 
 Set the API key as follows
 ```
@@ -74,7 +74,7 @@ CUDA_VISIBLE_DEVICES=<available_gpus>
 ```
 ## Maths (ArXiv Paper Section 6.1)
 
-These are experiments are run on MATH (Hendrycks et al.). These instruction will assume that you are using GPUs 0-3, so the gpus with the indicies 0,1,2,3. Modify the commands as necessary.
+These are experiments are run on `MATH` (Hendrycks et al.). These instruction will assume that you are using GPUs 0-3, so the gpus with the indicies 0,1,2,3. Modify the commands as necessary.
 
 `gllm` is a load balancer for using multiple parallel `vllm` servers.
 For experiments in this section you will first need to spin up a `gllm` server, ideally in a separate terminal tab or terminal session. 
@@ -105,7 +105,7 @@ To run a smaller experiment to verify that everything works correctly you can ov
 
 ```
 
-To replicate the experiments in Figure 3(b) and  finetune model a model on MATH using star run the following command.
+To replicate the experiments in Figure 3(b) and  finetune model a model on `MATH` using star run the following command.
 ```bash
 >> ./hendrycks_math/configs/star/baseline_qwen_2.5_7b/sweep_star_math_base.sh # Baselin
 >> ./hendrycks_math/configs/star/ifg_qwen_2.5_7b/sweep_star_math_base.sh # IFG
