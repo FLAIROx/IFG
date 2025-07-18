@@ -150,6 +150,7 @@ def generate_from_model(
         return responses
 
 
+# This function implements the crux of our method.
 def generate_comments_through_kw(
     articles: list[str],
     prompt_keywords: str,
@@ -172,24 +173,41 @@ def generate_comments_through_kw(
         include_stop_str_in_output=True,
     )
 
+    # We insert the current sample into the prompt template.
     prompts = [prompt_keywords.format(article=article) for article in articles]
     
     print("**************************************prompts", prompts)
 
-    
+
     def enforce_stop_str(text: str, stop_str: str= kw_stop_str) -> str:
+        """
+        Insert the seperator between the intent (keywords) and final generation.
+
+        This is necessary we generate the keywords until the stop string is encountered
+        and vllm does not include the stop string in the output.
+        """
         text = text.rstrip()
+        # As the keywords are comma separated, we remove the trailing commas if
+        # they occur. Although this is not strictly necessary, it makes our
+        # method stable, even at very high temperatures (>1.5) for the keywords.
         while text.endswith(","):
             text = text[:-1]
         if not stop_str in text:
             text += " " + stop_str
         return text
     
+    # We generate the intent (keywords).
     keywords = model.generate(prompts, sampling_params=kw_sampling_params)
+    # We add the seperator between the intent (keywords) and the final generation.
     keywords = [([enforce_stop_str(x.text) for x in prompt.outputs], prompt.prompt) for prompt in keywords]
+
+    # We wrap the (intent) keywords in a VLLMLookingOutput object.
     keywords = [VLLMLookingOutput(*outputs) for outputs in keywords]
     
+    # We extract the keywords from the VLLMLookingOutput object.
     keywords_generated = [[x.text for x in prompt.outputs] for prompt in keywords]
+
+    # We flatten the list of keywords.
     keywords_generated = sum(keywords_generated, [])
 
     comment_sampling_params = vllm.SamplingParams(
@@ -200,6 +218,8 @@ def generate_comments_through_kw(
         include_stop_str_in_output=True,
     )
 
+    # We concatenate the initial prompt with the intent (keywords) in
+    # preparation for sampling the final generation.
     prompts = [[prompt.prompt + x.text for x in prompt.outputs] for prompt in keywords]  # type: ignore
     prompts = sum(prompts, [])
 
@@ -207,6 +227,8 @@ def generate_comments_through_kw(
         model, prompts, sampling_params=comment_sampling_params
     )
 
+    # Post processing just reshapes the list to be 2D, one row per prompt, with
+    # n_responses columns.
     return (
         _post_process_comments(comments, n_comments, len(articles)),
         keywords_generated,
