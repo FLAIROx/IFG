@@ -30,7 +30,7 @@ This repository contains instructions for replicating the experiments on maths, 
 
 # The Simple Idea
 Although this code base contains a lot of code due to supporting multiple datasets, baselines, evaluation metrics and multiple backends, as well both chat and base models, our method remains very simple. 
-We invite the reader to to look at the [function here](https://github.com/FLAIROx/IFG/blob/1d49e538da82a6f0da41ecd30b899dec0ce2c5bc/unstructured_tasks/inference/rlhf_response_generation_utils.py#L153) or this [function here](https://github.com/EltayebAhmed/ifg_lcb/blob/69128ebcd804e7485fe54e3744f0ed032219e1a3/lcb_runner/runner/ifg_runner.py#L177) which both implement the core of our method.
+We invite the reader to look at the [function here](https://github.com/FLAIROx/IFG/blob/1d49e538da82a6f0da41ecd30b899dec0ce2c5bc/unstructured_tasks/inference/rlhf_response_generation_utils.py#L153) or this [function here](https://github.com/EltayebAhmed/ifg_lcb/blob/69128ebcd804e7485fe54e3744f0ed032219e1a3/lcb_runner/runner/ifg_runner.py#L177) which both implement the core of our method.
 
 # Replicating Experiments
 All instructions here assume you run commands from the root directory of the repository.
@@ -74,20 +74,20 @@ Otherwise, you can disable wandb with
 ```
 >> wandb disabled
 ```
-The experiments in Section **6.3** and **6.4** (conversational agents and user comments on news articles) require access to `Llama3.1`. To run these experiments you must set a huggingface API key with sufficient permissiont to access `Llama3.1`. This requires agreeing to terms and conditions for `Llama3.1` via the Huggingface🤗 website.
+The experiments in Section **6.3** and **6.4** (conversational agents and user comments on news articles) require access to `Llama3.1`. To run these experiments you must set a huggingface API key with sufficient permissions to access `Llama3.1`. This requires agreeing to terms and conditions for `Llama3.1` via the Huggingface🤗 website.
 
 Set the API key as follows
 ```
 >> export HF_TOKEN=<your_api_key>
 ```
 
-Finally if necessary per your setup, set the available GPUs as follows
+Finally, if necessary per your setup, set the available GPUs as follows
 ```
 CUDA_VISIBLE_DEVICES=<available_gpus>
 ```
 ## Maths (ArXiv Paper Section 6.1)
 
-These are experiments are run on `MATH` (Hendrycks et al.). These instruction will assume that you are using GPUs 0-3, so the gpus with the indicies 0,1,2,3. Modify the commands as necessary.
+These experiments are run on `MATH` (Hendrycks et al.). These instructions will assume that you are using GPUs 0-3, so the gpus with the indices 0,1,2,3. Modify the commands as necessary.
 
 `gllm` is a load balancer for using multiple parallel `vllm` servers.
 For experiments in this section you will first need to spin up a `gllm` server, ideally in a separate terminal tab or terminal session. 
@@ -102,7 +102,7 @@ This will start a gllm server with one worker per GPU on gpus 0-3.
 The each worker will use a random port above 12000 and the load balancer (which is OpenAI API compatible) will be accessible at localhost:8181.
 Our scripts will use this server behind the scenes.
 
-We then need to set the number of GPUs to 4 (or the number of GPUs you have available if different) by editing `unstructured_tasks/configs/zero_stage_3.yaml` as follows
+We then need to set the number of GPUs to 4 (or the number of GPUs you have available if different) by editing `hendrycks_math/configs/star/zero_stage_3.yaml` as follows
 ```
 num_processes: <number_of_gpus>
 ```
@@ -120,7 +120,7 @@ To run a smaller experiment to verify that everything works correctly you can ov
 
 To replicate the experiments in Figure 3(b) and  finetune model a model on `MATH` using star run the following command.
 ```bash
->> ./hendrycks_math/configs/star/baseline_qwen_2.5_7b/sweep_star_math_base.sh # Baselin
+>> ./hendrycks_math/configs/star/baseline_qwen_2.5_7b/sweep_star_math_base.sh # Baseline
 >> ./hendrycks_math/configs/star/ifg_qwen_2.5_7b/sweep_star_math_base.sh # IFG
 >> # This final configuration launches a small scale toy job, useful for testing setup or debugging .
 >> ./hendrycks_math/configs/star/small_debug_run/sweep_star_math_base.sh 
@@ -151,7 +151,7 @@ All results (checkpoints and scored generations) are written to the `data/` fold
 To produce results similar to Figure 5(a) using Prompted-IFG (not Finetuned-IFG as in the main body of the paper) run the following commands.
 ```bash
 >> ./unstructured_tasks/scripts/RLHF_NEWS_download_data.sh # Download data.
->> ./unstructured_tasks/scripts/NEWS_generate_ifg_comments_reddit.sh # Generate comments and score with Relaxed Sematnic entropy.
+>> ./unstructured_tasks/scripts/NEWS_generate_ifg_comments_reddit.sh # Generate comments and score with Relaxed Semantic entropy.
 ```
 All results (checkpoints and scored generations) are written to the `data/` folder in the current directory.
 
