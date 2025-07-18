@@ -34,7 +34,7 @@ All code was tested on `python3.11`.
 ## Setup
 We provide instructions for setting up environment using `python pip` but we also supply a docker container for those who would prefer it.
 
-### 1. Using pip
+### 1. 🐍 Using pip
 
 To install using `pip`, clone the repository and set up the `python` environment as follows
 ```
@@ -45,15 +45,15 @@ To install using `pip`, clone the repository and set up the `python` environment
 >> pip install -r requirements.txt
 ```
 
-### 2. Using Docker
+### 2. 🐳 Using Docker 
 Alternatively, if you have docker compose installed you can use the supplied Docker setup as follows:
 
-### 3. Configure environment variables.
+### 3. 🛠️ Configure environment variables.
 From the root directory of the repository run
 ```
 >> export PYTHONPATH=$(pwd)
 ```
-We use WandB for experiment tracking. To use it you must set you API key as follows
+We use [WandB](https://wandb.ai/site/) for experiment tracking. To use it you must set you API key as follows
 ```
 >> export WANDB_API_KEY=<your_api_key>
 ```
@@ -141,3 +141,15 @@ To produce results similar to Figure 5(a) using Prompted-IFG (not Finetuned-IFG 
 >> ./unstructured_tasks/scripts/NEWS_generate_ifg_comments_reddit.sh # Generate comments and score with Relaxed Sematnic entropy.
 ```
 All results (checkpoints and scored generations) are written to the `data/` folder in the current directory.
+
+## 📚 Citation
+If you use any of this work, it would be really nice if you could please cite 🥺 :
+
+```
+@article{ahmed2025intent,
+  title={Intent Factored Generation: Unleashing the Diversity in Your Language Model},
+  author={Ahmed, Eltayeb and Berdica, Uljad and Elliott, Martha and Horak, Danijela and Foerster, Jakob N},
+  journal={arXiv preprint arXiv:2506.09659},
+  year={2025}
+}
+```
