@@ -28,13 +28,14 @@ RUN apt-get install curl -y
 RUN curl -sS https://bootstrap.pypa.io/get-pip.py | python3.11 
 RUN apt install python3.11-dev -y
 
-# install dependencies via pip
-ARG UID=3566
-ARG GID=100
+
+ARG UID
+ARG GID
 
 RUN userdel -f $(getent passwd $UID | cut -d: -f1) 2>/dev/null || true
-RUN groupadd -g $GID ifg_user || true
-RUN useradd -d /project -u $UID -g $GID --create-home ifg_user 
+# Create ifg_user group with a unique GID or use existing group
+RUN groupadd -g $GID ifg_user 2>/dev/null || groupadd ifg_user
+RUN useradd -d /project -u $UID -g ifg_user --create-home ifg_user 
 RUN mkdir /scratch
 RUN mkdir /mount
 RUN ln -sf $(which python3.11) /usr/bin/python
@@ -53,6 +54,8 @@ ENV DS_BUILD_CPU_ADAM=1
 RUN pip install deepspeed --no-cache
 #ENV PATH "$PATH:/usr/local/bin"
 ENV PATH "$PATH:/project/.local/bin"
+USER root
 RUN chown -R ifg_user:ifg_user /project
+USER ifg_user
 WORKDIR /project
 CMD ["/bin/bash"]
