@@ -28,6 +28,8 @@ This repository contains instructions for replicating the experiments on maths, 
     <img src="IFG_code.gif" alt="Your Company Logo" style="max-width: 50%; height: auto; margin-bottom: 20px;">
 </div>
 
+# The Simple Idea
+Although this code base contains a lot of code due to supporting multiple datasets, baselines, evaluation metrics and multiple backends, as well both chat and base models, our method remains very simple. We invite the reader to to look at the [function here](https://github.com/FLAIROx/IFG/blob/2fb4f6f9c8ec479a8bf4e6815f0b0a981b6f2654/unstructured_tasks/inference/rlhf_response_generation_utils.py#L153) which implements the core of our method
 # Replicating Experiments
 All instructions here assume you run commands from the root directory of the repository.
 All code was tested on python3.11.
