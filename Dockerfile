@@ -33,7 +33,7 @@ ARG UID=3566
 ARG GID=100
 
 RUN userdel -f $(getent passwd $UID | cut -d: -f1) 2>/dev/null || true
-RUN groupadd -g $GID eltayeb || true
+RUN groupadd -g $GID ifg_user || true
 RUN useradd -d /project -u $UID -g $GID --create-home ifg_user 
 RUN mkdir /scratch
 RUN mkdir /mount
@@ -53,6 +53,6 @@ ENV DS_BUILD_CPU_ADAM=1
 RUN pip install deepspeed --no-cache
 #ENV PATH "$PATH:/usr/local/bin"
 ENV PATH "$PATH:/project/.local/bin"
-RUN chown -R ifg_user:eltayeb /project
+RUN chown -R ifg_user:ifg_user /project
 WORKDIR /project
 CMD ["/bin/bash"]
