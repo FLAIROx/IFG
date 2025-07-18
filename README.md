@@ -8,14 +8,14 @@ Unleashing the Diversity in Your Language Model</h1>
 <p align="center">
 <a href="https://ifg-llm.github.io/">
         <img src="https://img.shields.io/badge/Website-Visit-blueviolet.svg" /></a>
-    <a href= "https://github.com/psf/black">
-        <img src="https://img.shields.io/badge/code%20style-black-000000.svg" /></a>
-    <a href= "LICENSE">
-        <img src="https://img.shields.io/badge/license-Apache2.0-blue.svg" /></a>
     <a href= "https://arxiv.org/abs/2506.09659">
         <img src="https://img.shields.io/badge/arXiv-2506.09659-b31b1b.svg" /></a>
     <a href="https://huggingface.co/datasets/clockwork7/reddit_news_articles_comments">
         <img src="https://img.shields.io/badge/🤗%20Hugging%20Face-Dataset-yellow.svg" /></a>
+    <a href= "https://github.com/psf/black">
+        <img src="https://img.shields.io/badge/code%20style-black-000000.svg" /></a>
+    <a href= "LICENSE">
+        <img src="https://img.shields.io/badge/license-Apache2.0-blue.svg" /></a>
 
 </p>
 
