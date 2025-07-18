@@ -202,6 +202,7 @@ def generate_comments_through_kw(
     keywords = [([enforce_stop_str(x.text) for x in prompt.outputs], prompt.prompt) for prompt in keywords]
 
     # We wrap the (intent) keywords in a VLLMLookingOutput object.
+    # This is just boilerplate.
     keywords = [VLLMLookingOutput(*outputs) for outputs in keywords]
     
     # We extract the keywords from the VLLMLookingOutput object.
