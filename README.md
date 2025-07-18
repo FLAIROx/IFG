@@ -29,7 +29,9 @@ This repository contains instructions for replicating the experiments on maths, 
 </div>
 
 # The Simple Idea
-Although this code base contains a lot of code due to supporting multiple datasets, baselines, evaluation metrics and multiple backends, as well both chat and base models, our method remains very simple. We invite the reader to to look at the [function here](https://github.com/FLAIROx/IFG/blob/2fb4f6f9c8ec479a8bf4e6815f0b0a981b6f2654/unstructured_tasks/inference/rlhf_response_generation_utils.py#L153) which implements the core of our method
+Although this code base contains a lot of code due to supporting multiple datasets, baselines, evaluation metrics and multiple backends, as well both chat and base models, our method remains very simple. 
+We invite the reader to to look at the [function here](https://github.com/FLAIROx/IFG/blob/1d49e538da82a6f0da41ecd30b899dec0ce2c5bc/unstructured_tasks/inference/rlhf_response_generation_utils.py#L153) or this [function here](https://github.com/EltayebAhmed/ifg_lcb/blob/69128ebcd804e7485fe54e3744f0ed032219e1a3/lcb_runner/runner/ifg_runner.py#L177) which both implement the core of our method.
+
 # Replicating Experiments
 All instructions here assume you run commands from the root directory of the repository.
 All code was tested on `python3.11`.
@@ -49,7 +51,13 @@ To install using `pip`, clone the repository and set up the `python` environment
 ```
 
 ### 2. 🐳 Using Docker 
-Alternatively, if you have docker compose installed you can use the supplied [Docker setup](Dockerfile).
+Alternatively, if you have docker compose installed you can use the supplied [Docker setup](Dockerfile)
+```bash
+>> cd IFG
+>> docker compose run ifg
+>> cd IFG
+```
+
 
 ### 3. 🌱 Configure environment variables.
 From the root directory of the repository run
