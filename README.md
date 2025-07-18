@@ -31,7 +31,8 @@ This repository contains instructions for replicating the experiments on maths, 
 # Replicating Experiments
 All instructions here assume you run commands from the root directory of the repository.
 All code was tested on `python3.11`.
-## Setup
+
+## 🛠️ Setup
 We provide instructions for setting up environment using `python pip` but we also supply a docker container for those who would prefer it.
 
 ### 1. 🐍 Using pip
@@ -46,9 +47,9 @@ To install using `pip`, clone the repository and set up the `python` environment
 ```
 
 ### 2. 🐳 Using Docker 
-Alternatively, if you have docker compose installed you can use the supplied Docker setup as follows:
+Alternatively, if you have docker compose installed you can use the supplied [Docker setup](Dockerfile).
 
-### 3. 🛠️ Configure environment variables.
+### 3. 🌱 Configure environment variables.
 From the root directory of the repository run
 ```
 >> export PYTHONPATH=$(pwd)
