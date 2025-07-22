@@ -54,7 +54,8 @@ To install using `pip`, clone the repository and set up the `python` environment
 Alternatively, if you have docker compose installed you can use the supplied [Docker setup](Dockerfile)
 ```bash
 >> cd IFG
->> export UID=$(id -u) GID=$(id -g)
+>> export UID=$(id -u) 2&> /dev/null|| true
+>> export GID=$(id -g)
 >> docker compose build
 >> docker compose run ifg
 >> cd IFG
