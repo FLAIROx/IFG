@@ -35,7 +35,7 @@ do
     # Ensure logs directory exists
     mkdir -p $log_dir
     
-    CUDA_VISIBLE_DEVICES=$gpu_id python3 -m unstructured_tasks.inference.generate_comments_reddit \
+    CUDA_VISIBLE_DEVICES=$gpu_id python -m unstructured_tasks.inference.generate_comments_reddit \
         --model-comments "Qwen/Qwen2.5-7B" \
         --num-articles 100 \
         --num-comments 15 \
