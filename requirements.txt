@@ -13,10 +13,9 @@ accelerate
 cattrs
 datasets
 wandb
-deepspeed
+torch
 trl
 backoff
 nltk
-torch
 PyYAML
 git+https://github.com/EltayebAhmed/gllm.git

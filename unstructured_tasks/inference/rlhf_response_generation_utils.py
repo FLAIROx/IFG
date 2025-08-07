@@ -1,11 +1,7 @@
 from typing import Any, Optional, List, Dict
 import json
-from multiprocessing import dummy as threading_tools
-import functools
-import tqdm
 import dataclasses
 import vllm
-# import gllm
 import transformers
 
 
@@ -197,6 +193,7 @@ def generate_comments_through_kw(
         return text
     
     # We generate the intent (keywords).
+    print("kw sampling params", kw_sampling_params)
     keywords = model.generate(prompts, sampling_params=kw_sampling_params)
     # We add the seperator between the intent (keywords) and the final generation.
     keywords = [([enforce_stop_str(x.text) for x in prompt.outputs], prompt.prompt) for prompt in keywords]
@@ -224,10 +221,10 @@ def generate_comments_through_kw(
     prompts = [[prompt.prompt + x.text for x in prompt.outputs] for prompt in keywords]  # type: ignore
     prompts = sum(prompts, [])
 
+    print("comment sampling params", comment_sampling_params)
     comments = generate_from_model(
         model, prompts, sampling_params=comment_sampling_params
     )
-
     # Post processing just reshapes the list to be 2D, one row per prompt, with
     # n_responses columns.
     return (

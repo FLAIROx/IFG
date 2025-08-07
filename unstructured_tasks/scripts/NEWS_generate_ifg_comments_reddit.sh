@@ -12,14 +12,14 @@ gpu_id=$1
 
 # Define the range of keyword temperatures to test
 # You can modify these values as needed
-comments_temps=0.5
-keyword_temps=(0.3 0.57 0.64 0.71 0.79 0.86 0.93 1.0)
+comments_temps=(0.7 1.3 1.6 2.0) #(3 4 5 6)
+keyword_temps=(1.2 1.5 1.9 2.5) #(3 4 5 6) #(0.3 0.57 0.64 0.71 0.79 0.86 0.93 1.0)
 
 # Use index to iterate through both arrays simultaneously
 for i in "${!keyword_temps[@]}" 
 do
     kw_temp="${keyword_temps[$i]}"
-    comm_temp=$comments_temps
+    comm_temp="${comments_temps[$i]}"
     
     echo "Starting job with keyword_temp = $kw_temp, comments_temp = $comm_temp on GPU $gpu_id"
     
@@ -30,12 +30,12 @@ do
     log_dir="data/logs"
     timestamp=$(date +"%Y%m%d_%H%M%S")
 
-    log_file="$log_dir/Qwen2.5-7B-ifg_${kw_temp}_${comm_temp}_gpu${gpu_id}_${timestamp}.log"
+    log_file="$log_dir/Qwen2.5-7B-ifg_${kw_temp}_${comm_temp}_gpu${gpu_id}_${timestamp}_$((RANDOM)).log"
     
     # Ensure logs directory exists
     mkdir -p $log_dir
     
-    CUDA_VISIBLE_DEVICES=$gpu_id python3 -m unstructured_tasks.inference.generate_comments_reddit \
+    CUDA_VISIBLE_DEVICES=$gpu_id python -m unstructured_tasks.inference.generate_comments_reddit \
         --model-comments "Qwen/Qwen2.5-7B" \
         --num-articles 100 \
         --num-comments 15 \

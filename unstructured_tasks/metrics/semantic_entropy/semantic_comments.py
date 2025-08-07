@@ -2,6 +2,7 @@
 
 import logging
 import os
+import datetime
 import numpy as np
 from vllm import LLM, SamplingParams
 import matplotlib.pyplot as plt
@@ -73,7 +74,8 @@ def classify_comment_pairs(
     similarity_matrix = np.zeros((num_comments, num_comments))
 
     # Open a file to save the responses
-    with open("responses.txt", "w", encoding="utf-8") as response_file:
+    timestamp = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
+    with open(f"responses_{timestamp}.txt", "w", encoding="utf-8") as response_file:
         prompts = []
         indices = []
 
@@ -109,9 +111,11 @@ def classify_comment_pairs(
                             similarity_matrix[i, j] = 1
 
                         # Print full response including reasoning (optional)
-                        logging.debug(f"\nComparing comments {i} and {j}:")
-                        logging.debug(response)
-                        # logging.debug("---")
+                        logging.debug(f"Comparing comments {i} and {j}:")
+                        logging.debug("Comment %d : %s", i, comments[i])
+                        logging.debug("Comment %d : %s", j, comments[j])
+                        logging.debug("Response of %d, %d: %s", i, j, response)
+                        logging.debug("---")
 
                     # Clear the batch
                     prompts = []
@@ -144,7 +148,6 @@ def classify_comment_pairs(
                 logging.debug(f"\nComparing comments {i} and {j}:")
                 logging.debug(response)
                 # logging.debug("---")
-
     return similarity_matrix
 
 

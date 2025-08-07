@@ -95,6 +95,7 @@ def main(
             model=comments_model,
             n_comments=cfg.num_comments,
             keyword_temp=cfg.keyword_temp,
+            comment_temp=cfg.comments_temp,
             comment_stop_str=cfg.separator,
         )
         data["keywords"] = {"comments": comments_kw, "keywords": keywords}
@@ -162,5 +163,29 @@ def main(
 
 
 if __name__ == "__main__":
+    import logging
+    import os
+    from datetime import datetime
+
+    # Create logs directory if it doesn't exist
+    log_dir = "data/logs"
+    os.makedirs(log_dir, exist_ok=True)
+
+    # Configure logging to file with timestamp
+    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+    log_file = os.path.join(log_dir, f"generate_comments_{timestamp}.log")
+    logging.basicConfig(
+        level=logging.DEBUG,
+        format='%(asctime)s - %(name)s - %(levelname)s - %(lineno)d - %(message)s',
+        handlers=[
+            logging.FileHandler(log_file),
+            logging.StreamHandler()  # Also log to console
+        ]
+    )
+
     cfg = tyro.cli(Config)
+    logging.info("Config:")
+    for key, value in dataclasses.asdict(cfg).items():
+        logging.info(f"{key}: {value}")
+    logging.info(f"Starting job with keyword_temp = {cfg.keyword_temp}, comments_temp = {cfg.comments_temp}")
     main(cfg)
