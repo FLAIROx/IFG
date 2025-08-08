@@ -42,8 +42,8 @@ class Config:
     output_path: str = "data/generated_responses/reddit_comments/rse/comments_rse.json"
 
     # VLLM options
-    max_model_len: int = 8192
-    gpu_memory_utilization: float = 0.9
+    max_model_len: int = 4096
+    gpu_memory_utilization: float = 0.8
 
 
 def _load_json(path: str) -> Dict[str, Any]:
@@ -121,6 +121,8 @@ def main(cfg: Config) -> None:
 
 
 if __name__ == "__main__":
+    import logging
+#    logging.basicConfig(level=logging.DEBUG)
     cfg = tyro.cli(Config)
     main(cfg)
 

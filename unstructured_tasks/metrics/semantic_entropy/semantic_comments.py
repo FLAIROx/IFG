@@ -60,6 +60,16 @@ def classify_comment_pairs(
     model_name="meta-llama/Llama-3.1-8B-Instruct",
     llm=None,
 ):
+    old_comments = comments
+    comments = []
+    for comment in old_comments:
+        while True:
+            if comment.endswith('\n') or comment.endswith('#'):
+                comment = comment[:-1]
+            else:
+                comments.append(comment)
+                break
+
     if llm is None:
         llm = LLM(model=model_name)
 

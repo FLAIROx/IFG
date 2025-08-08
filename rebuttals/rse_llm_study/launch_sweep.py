@@ -5,8 +5,8 @@ from pathlib import Path
 
 
 models = [
-    "google/gemma-3-12b-pt",
     "Qwen/Qwen3-8B-Base",
+    "google/gemma-3-12b-pt",
 ]
 
 files = [
@@ -60,8 +60,11 @@ def _build_output_path(input_path: str, model_name: str) -> Path:
 
 
 def main() -> None:
-    for model in models:
+    for j, model in enumerate(models):
         for i, input_file in enumerate(files):
+            gpu = j * 4 + i
+#            if gpu >= 4:
+ #               continue
             output_path = _build_output_path(input_file, model)
             cmd = [
                 "python",
@@ -77,10 +80,10 @@ def main() -> None:
 
             print("Running:", " ".join(shlex.quote(part) for part in cmd))
 
-            assert 0 <= i <= 7, "We only have 8 GPUs"
+            assert 0 <= gpu <= 7, "We only have 8 GPUs"
             try:
                 env = os.environ.copy()
-                env["CUDA_VISIBLE_DEVICES"] = str(i)
+                env["CUDA_VISIBLE_DEVICES"] = str(gpu)
                 subprocess.Popen(cmd, env=env, start_new_session=True)
             except subprocess.CalledProcessError as exc:
                 print(f"Command failed with exit code {exc.returncode}")
