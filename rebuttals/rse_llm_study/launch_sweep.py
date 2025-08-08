@@ -81,7 +81,7 @@ def main() -> None:
             try:
                 env = os.environ.copy()
                 env["CUDA_VISIBLE_DEVICES"] = str(i)
-                subprocess.run(cmd, check=True, env=env)
+                subprocess.Popen(cmd, env=env, start_new_session=True)
             except subprocess.CalledProcessError as exc:
                 print(f"Command failed with exit code {exc.returncode}")
 
