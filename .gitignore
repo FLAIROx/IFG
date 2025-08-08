@@ -11,5 +11,5 @@ dev/hugging_token
 dev/databricks_key
 data/
 graph.png
-responses.txt
+response*.txt
 mlruns/
