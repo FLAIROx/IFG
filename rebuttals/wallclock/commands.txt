@@ -1,3 +1,3 @@
- /usr/bin/python3.11 -m hendrycks_math.ifg_infer_and_score --yaml=rebuttals/wallclock/baseline.yaml --temperature_even_index=0.4119941307320988 --output_dir=/mount/data/wall_clock/k_4/test_run --split=test
+/usr/bin/python3.11 -m hendrycks_math.ifg_infer_and_score --yaml=rebuttals/wallclock/baseline.yaml --temperature_even_index=0.4119941307320988 --output_dir=/mount/data/wall_clock/baseline/k_4/test_run --split=test
 
- /usr/bin/python3.11 hendrycks_math.ifg_infer_and_score --yaml=rebuttals/wallclock/ifg.yaml --temperature_even_index=0.47513952050632735 --temperature_odd_index=0.20386039813862933 --output_dir=/mount/data/wall_clock/k_4/test_run --split=test
+ /usr/bin/python3.11 hendrycks_math.ifg_infer_and_score --yaml=rebuttals/wallclock/ifg.yaml --temperature_even_index=0.47513952050632735 --temperature_odd_index=0.20386039813862933 --output_dir=/mount/data/wall_clock/ifg/k_4/test_run --split=test

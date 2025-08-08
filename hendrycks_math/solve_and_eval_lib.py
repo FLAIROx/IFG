@@ -7,7 +7,7 @@ wrappers for evaluating MATH and Omni-MATH problems."""
 import abc
 import copy
 from typing import Callable, Optional
-from uuid import uuid5
+from uuid import uuid4
 
 import transformers
 
@@ -57,7 +57,7 @@ def solve_problem(
         the problem, the prompt, the solution attempt, and whether the solution
         was terminated.
     """
-    conversation_id = str(uuid5(uuid5.NAMESPACE_DNS, str(uuid5.uuid4())))
+    conversation_id = str(uuid4())
     terminated = False
     result = None
     for j in range(max_steps):
