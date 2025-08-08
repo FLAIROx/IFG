@@ -12,8 +12,8 @@ gpu_id=$1
 
 # Define the range of keyword temperatures to test
 # You can modify these values as needed
-comments_temps=(0.7 1.3 1.6 2.0) #(3 4 5 6)
-keyword_temps=(1.2 1.5 1.9 2.5) #(3 4 5 6) #(0.3 0.57 0.64 0.71 0.79 0.86 0.93 1.0)
+comments_temps=(0.0 0.3 0.5 0.7) #(3 4 5 6)
+keyword_temps=(0.2 0.5 0.7 1.0) #(3 4 5 6) #(0.3 0.57 0.64 0.71 0.79 0.86 0.93 1.0)
 
 # Use index to iterate through both arrays simultaneously
 for i in "${!keyword_temps[@]}" 

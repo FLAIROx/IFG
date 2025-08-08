@@ -13,6 +13,7 @@ def generate_from_model(
     model: vllm.LLM | transformers.PreTrainedModel | gllm.GLLM,
     prompts: list[str] | list[math_types.JsonMessages],
     sampling_params: math_types.GenericSamplingParams,
+    conversation_id: Optional[str] = None,
 ) -> list[str]:
     """Generate continutions from an LLM for given prompts and sampling params.
 
@@ -60,6 +61,7 @@ def generate_from_model(
                     prompt,
                     **local_sampling_params,
                     return_mode="primitives",
+                    conversation_id=conversation_id,
                 )
                 response = [r["content"] for r in response] # type: ignore
             else:  # direct completion
@@ -69,6 +71,7 @@ def generate_from_model(
                     prompt,
                     **local_sampling_params,
                     return_mode="primitives",
+                    conversation_id=conversation_id,
                 )
             
             # We need to add the stop string to the responses as OpenAI compatibile
