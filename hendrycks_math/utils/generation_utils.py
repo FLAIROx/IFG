@@ -99,6 +99,7 @@ def get_sampling_params_for_model(
     model_name: Optional[str] = None,
     num_beam_groups: int = 1,
     diversity_penalty: float = 0.0,
+    min_p: float = 0.0,
     gllm_mode: str = "completions",
 ) -> math_types.GenericSamplingParams:
     """Create a SamplingParams object for the model.
@@ -117,6 +118,7 @@ def get_sampling_params_for_model(
             max_tokens=max_tokens,
             n=n,
             stop=stop_str,
+            min_p=min_p,
             include_stop_str_in_output=include_stop_str_in_output,
         )
 
@@ -149,6 +151,7 @@ def get_sampling_params_for_model(
             "temperature": temperature,
             "max_tokens": max_tokens,
             "n": n,
+            "min_p": min_p,
             "stop": stop_str,
             "model": model_name,
         }

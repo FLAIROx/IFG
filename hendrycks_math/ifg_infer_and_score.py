@@ -45,6 +45,7 @@ class IfgEvalConfig:
     temperature_even_index: Optional[float] = None
     temperature_odd_index: Optional[float] = None
     global_temperature: Optional[float] = None
+    min_p: float = 0.0
     # If global_temperature is set, it will override the
     # temperature_even_index and temperature_odd_index
     separator: str
@@ -348,6 +349,7 @@ def main(cfg: IfgEvalConfig, dataset: Optional[datasets.Dataset] = None):
         max_tokens_per_step=cfg.max_tokens_per_step,
         temperature_even_index=cfg.temperature_even_index,
         temperature_odd_index=cfg.temperature_odd_index,
+        min_p=cfg.min_p,
         max_n_steps=cfg.max_steps,
         solution_end=cfg.solution_end,
         step_separator=cfg.separator,

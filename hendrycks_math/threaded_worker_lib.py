@@ -40,6 +40,7 @@ class IfgSamplerWorker(threading.Thread):
         model_tokenizer: Optional[transformers.AutoTokenizer],
         prompt_template: str | math_types.JsonMessages,
         max_tokens_per_step: int,
+        min_p: float,
         temperature_even_index: float,
         temperature_odd_index: Optional[float],
         max_n_steps: int,
@@ -56,6 +57,7 @@ class IfgSamplerWorker(threading.Thread):
         self.max_tokens_per_step = max_tokens_per_step
         self.temperature_even_index = temperature_even_index
         self.temperature_odd_index = temperature_odd_index
+        self.min_p = min_p
         self.max_n_steps = max_n_steps
         self.step_separator = step_separator
         self.model_name = model_name
@@ -98,6 +100,7 @@ class IfgSamplerWorker(threading.Thread):
                 model=self.model,
                 n_shots=n_shots,
                 max_steps=self.max_n_steps,
+                min_p=self.min_p,
                 temperature_even_index=self.temperature_even_index,
                 temperature_odd_index=self.temperature_odd_index,
                 solution_end_marker=self.solution_end,
@@ -125,6 +128,7 @@ class IfgSamplerWorker(threading.Thread):
             stop_str=self.step_separator,
             include_stop_str_in_output=True,
             model_name=self.model_name,
+            min_p=self.min_p,
         )
 
 

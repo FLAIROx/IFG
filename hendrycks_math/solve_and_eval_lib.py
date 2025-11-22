@@ -28,6 +28,7 @@ def solve_problem(
     model: math_types.Model,
     n_shots: int,
     max_steps: int,
+    min_p: float,
     temperature_even_index: float,
     temperature_odd_index: Optional[float],
     solution_end_marker: str,
@@ -68,7 +69,7 @@ def solve_problem(
             else:
                 raise ValueError("temperature_odd_index must be set if max_steps > 1")
 
-        sampling_params = get_sampling_params(temperature)
+        sampling_params = get_sampling_params(temperature, min_p)
         response = generation_utils.generate_from_model(
             model, [solution_attempt.prompt], sampling_params,  # type: ignore
             conversation_id=conversation_id
