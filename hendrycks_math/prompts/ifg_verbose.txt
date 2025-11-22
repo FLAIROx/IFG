@@ -1,0 +1,48 @@
+The following are maths questions and their step by step solutions. Each step starts with intent that describes the intent followed by a ### as a separator followed by the actual step. The final answer is enclosed in \boxed{{}}. Each of the different questions is separated by ===.
+
+Question: If $g(x)=\sqrt[3]{{\frac{{x+3}}{{4}}}}$, for what value of $x$ will $g(2x)=2(g(x))$? Express your answer in simplest form.
+Solution: 
+### Substitute the expressions for g(2x) and 2g(x) into the equation and set them equal to each other ### Since $g(x)=\sqrt[3]{{\frac{{x+3}}{{4}}}}$, we know that $g(2x)=\sqrt[3]{{\frac{{2x+3}}{{4}}}}$. Similarly, we see that $2(g(x))=2\sqrt[3]{{\frac{{x+3}}{{4}}}}$. This gives us the equation \begin{{align*}} \sqrt[3]{{\frac{{2x+3}}{{4}}}}&=2\sqrt[3]{{\frac{{x+3}}{{4}}}}
+### Raise both sides of the equation to the third power to eliminate the cube roots ### \\\Rightarrow\qquad\left(\sqrt[3]{{\frac{{2x+3}}{{4}}}}\right)^3&=\left(2\sqrt[3]{{\frac{{x+3}}{{4}}}}\right)^3
+### Simplify by evaluating the powers and applying the exponent to both the coefficient and the fraction ### \\\Rightarrow\qquad \frac{{2x+3}}{{4}}&=\frac{{8(x+3)}}{{4}}
+### Distribute the multiplication by expanding 8 times (x+3) in the numerator of the right-hand side ### \\\Rightarrow\qquad\frac{{2x+3}}{{4}}&=\frac{{8x+24}}{{4}}
+### Multiply both sides by 4 to eliminate the common denominator and simplify the equation ### \\\Rightarrow\qquad 2x+3&=8x+24
+### Rearrange terms by moving all x terms to one side and constants to the other side to isolate the variable ###\\\Rightarrow\qquad-6x&=21
+### Divide both sides by -6 to solve for x and obtain the final answer ### \\\Rightarrow\qquad x&=\boxed{{-\frac{{7}}{{2}}}}
+\end{{align*}}
+===
+###
+Question: How many three-digit numbers are multiples of neither 5 nor 7?
+Solution: 
+### Invert the objective by using complementary counting to find those that are NOT multiples instead of directly counting them ### It's easy to count the number of three-digit numbers which are multiples of 5 or 7.
+### Compute the smallest three-digit multiple of 7 by finding the first integer n such that 7n is at least 100 ### the smallest multiple of 7 which is a three-digit number is $15 \times 7 = 105$
+### Compute the largest three-digit multiple of 7 by finding the largest integer n such that 7n does not exceed 999 ### the largest multiple of 7 that is a three-digit number is $142 \times 7 = 994$.
+### Count the total number of three-digit multiples of 7 by subtracting the smallest index from the largest and adding 1 ### Therefore, there are $142-15+1 = 128$ three-digit numbers that are multiples of 7.
+### Compute the smallest three-digit multiple of 5 by finding the first integer n such that 5n is at least 100 ### The smallest multiple of 5 that is a three-digit number is $20\times 5 = 100$
+### Compute the largest three-digit multiple of 5 by finding the largest integer n such that 5n does not exceed 999 ### the largest multiple of 5 that is a three digit number is $199\times 5 =995$. 
+### Count the total number of three-digit multiples of 5 by subtracting the smallest index from the largest and adding 1 ### So there are $199-20+1=180$ multiples of 5.
+### Apply the inclusion-exclusion principle by counting multiples of 35 (which are counted in both the multiples of 5 and 7) to avoid double-counting ### Now notice that we have counted some numbers twice: those multiples of $5\times7=35$. The smallest multiple of 35 is $3\times 35 = 105$, the largest multiple of 35 is $28\times35 =980$. So there are $28-3+1=26$ multiples of 35.
+
+We have 128 multiples of 7 and 180 multiples of 5, but we count 26 multiples twice.  So, there are a total of $128+180-26 = 282$ distinct three-digit numbers that are multiples of 5 or 7 (or both).   There are 900 three-digit numbers in total (from 100 to 999), so there are $900-282=\boxed{{618}}$ three-digit numbers that are not multiples of 7 nor 5.
+###
+Question: Given that $\sec x + \tan x = \frac{{4}}{{3}},$ enter all possible values of $\sin x.$
+Solution: 
+### Rewrite the equation in terms of sine and cosine by expressing secant and tangent using their fundamental definitions ### We can re-write the given equation as $\frac{{1}}{{\cos x}} + \frac{{\sin x}}{{\cos x}} = \frac{{4}}{{3}},$ 
+### Multiply both sides by the common denominator cosine x and simplify to eliminate the fractions ### \[3 + 3 \sin x = 4 \cos x.\]
+### Square both sides of the equation to eliminate the linear cosine term and create a relationship involving sin^2 and cos^2 ### \[9 + 18 \sin x + 9 \sin^2 x = 16 \cos^2 x\]
+### Rewrite cosine squared in terms of sine using the Pythagorean identity cos^2(x) = 1 - sin^2(x) ### \[9 + 18 \sin x + 9 \sin^2 x   = 16 (1 - \sin^2 x).\]
+### Rearrange and combine like terms to write the equation in standard quadratic form ax^2 + bx + c = 0 ### Then $25 \sin^2 x + 18 \sin x - 7 = 0,$
+### Factorise the quadratic equation and solve for sine by setting each factor equal to zero ### factors as $(\sin x + 1)(25 \sin x - 7) = 0.$  Hence, $\sin x = -1$ or $\sin x = \frac{{7}}{{25}}.$
+### Check whether each solution is valid by verifying it doesn't create undefined expressions in the original equation ### If $\sin x = -1,$ then $\cos^2 x = 1 - \sin^2 x = 0,$ so $\cos x = 0.$  But this makes $\sec x$ and $\tan x$ undefined.  
+### Eliminate the invalid solution and present the final answer with only the valid values of sine x ### So the only possible value of $\sin x$ is $\boxed{{\frac{{7}}{{25}}}}.$
+===
+###
+Question: A fair 6-sided die is rolled.  What is the probability that the number rolled is a divisor of 6?
+Solution: 
+### Count the total number of divisors of 6 by listing all positive integers that divide 6 evenly ### There are 4 divisors of 6, namely $1,2,3,6$.  
+### Divide the number of favorable outcomes by the total number of possible outcomes to calculate the probability ### So the answer is $\dfrac46=\boxed{{\dfrac23}}$.
+===
+###
+Question: {question}
+Solution:
+### 
