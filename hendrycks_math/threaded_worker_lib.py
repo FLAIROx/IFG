@@ -119,7 +119,7 @@ class IfgSamplerWorker(threading.Thread):
             )
             self.solution_queue.put(graded)
 
-    def get_sampling_params(self, temperature: float):
+    def get_sampling_params(self, temperature: float, min_p: float = 0.0):
         return generation_utils.get_sampling_params_for_model(
             self.model,
             temperature,
@@ -128,7 +128,7 @@ class IfgSamplerWorker(threading.Thread):
             stop_str=self.step_separator,
             include_stop_str_in_output=True,
             model_name=self.model_name,
-            min_p=self.min_p,
+            min_p=min_p,
         )
 
 
@@ -147,6 +147,7 @@ class MultiThreadedIFGSampler:
         max_tokens_per_step: int,
         temperature_even_index: float,
         temperature_odd_index: Optional[float],
+        min_p: float,
         max_n_steps: int,
         solution_end: str,
         step_separator: str,
@@ -168,6 +169,7 @@ class MultiThreadedIFGSampler:
                 max_tokens_per_step=max_tokens_per_step,
                 temperature_even_index=temperature_even_index,
                 temperature_odd_index=temperature_odd_index,
+                min_p=min_p,
                 max_n_steps=max_n_steps,
                 solution_end=solution_end,
                 step_separator=step_separator,

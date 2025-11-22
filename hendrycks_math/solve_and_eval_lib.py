@@ -32,7 +32,7 @@ def solve_problem(
     temperature_even_index: float,
     temperature_odd_index: Optional[float],
     solution_end_marker: str,
-    get_sampling_params: Callable[[float], math_types.GenericSamplingParams],
+    get_sampling_params: Callable[[float, float], math_types.GenericSamplingParams],
 ) -> ProblemSolutionRecord:
     """Sample solution to a math problem using a multi-step IFG.
 
