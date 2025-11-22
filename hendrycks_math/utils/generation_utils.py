@@ -61,7 +61,7 @@ def generate_from_model(
                     prompt,
                     **local_sampling_params,
                     return_mode="primitives",
-                    conversation_id=conversation_id,
+                    #conversation_id=conversation_id,
                 )
                 response = [r["content"] for r in response] # type: ignore
             else:  # direct completion
