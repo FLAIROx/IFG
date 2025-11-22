@@ -2,7 +2,7 @@
     "fixed_args": "",
     "output_dir_argname": "output_dir",
     "output_dir": "/data/acl_rebuttals/k_vs_pass_at_k/Qwen2.5-7b-min-p",
-   "output_dir_suffix": "temp_{temperature_even_index:.2f}_{min_p:.2f}",
+   "output_dir_suffix": "temp_{temperature_even_index:.2f}_min_p_{min_p:.2f}",
     "sweep_args": [
         {
             "arg": "temperature_even_index",
