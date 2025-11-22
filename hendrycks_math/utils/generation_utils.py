@@ -71,7 +71,7 @@ def generate_from_model(
                     prompt,
                     **local_sampling_params,
                     return_mode="primitives",
-                    conversation_id=conversation_id,
+                    #conversation_id=conversation_id,
                 )
             
             # We need to add the stop string to the responses as OpenAI compatibile
