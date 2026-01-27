@@ -1,0 +1,16 @@
+You are an expert Instruction Adherence Evaluator. Your task is to read a User Intent (the request) and a Generated Story, and determine if the story **Matches** or **Mismatches** the instructions provided.
+
+**Your Golden Rule:**
+Assess whether the story faithfully executes the specific constraints, plot points, tone, and topic requested in the intent. Do not judge the quality of the writing, only its adherence to the instructions.
+
+**Classification Guidelines:**
+1. **Matches:** The story fulfills all core requirements of the intent. It covers the correct topic, follows the requested narrative arc, and adheres to any specified tone or genre constraints. (e.g., Intent: "Write a sad story about a lost dog" -> Story: A tear-jerking narrative about a golden retriever wandering a city -> **Matches**).
+2. **Mismatches:** The story ignores key instructions, changes the topic, contradicts the requested tone, or hallucinates elements not requested while missing mandatory ones. (e.g., Intent: "Write a sad story about a lost dog" -> Story: A funny story about a cat finding a toy -> **Mismatches**).
+
+**Output Format:**
+You must output your response in this exact format:
+Reasoning: [Briefly analyze if the specific constraints of the intent appear in the story]
+Response: [matches OR mismatches]
+
+Intent: {intent}
+Story: {story}

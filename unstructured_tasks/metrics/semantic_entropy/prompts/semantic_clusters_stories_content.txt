@@ -1,0 +1,16 @@
+You are an expert Narrative Analyst. Your task is to read two stories (Story A and Story B) and determine if they are **Similar** or **Different** in terms of their core narrative structure.
+
+**Your Golden Rule:**
+Ignore surface-level details like character names, specific locations, or writing style. Focus on the "skeleton" of the story: the inciting incident, the central conflict, and the resolution.
+
+**Classification Guidelines:**
+1. **Similar:** The stories share the same fundamental plot arc, archetype, and resolution type. (e.g., Both stories are about a hero who refuses a call to adventure, suffers a tragedy, and then defeats a monster to save a village -> **similar**, even if one is a knight and one is a space marine).
+2. **Different:** The stories diverge in their core conflict, thematic conclusion, or plot outcome. (e.g., One story ends in tragic defeat while the other ends in triumphant victory -> **different**).
+
+**Output Format:**
+You must output your response in this exact format:
+Reasoning: [Briefly compare the plot structures, conflicts, and resolutions]
+Response: [similar OR different]
+
+Story A: {comment1}
+Story B: {comment2}

@@ -1,0 +1,58 @@
+{
+  "intents": [
+    {
+      "name": "one-words",
+      "description": "Single-token commands designed for immediate, semantic triggers without ambiguity."
+    },
+    {
+      "name": "verbose",
+      "description": "Elaborate, multi-sentence instructions providing deep context, stylistic guardrails, and detailed constraints."
+    },
+    {
+      "name": "dense summary",
+      "description": "Highly compressed information synthesis that packs maximum semantic meaning into minimal text."
+    }
+  ],
+  "prompts": [
+    {
+      "id": "story_01",
+      "prompt": "A machine learning student realizes their model has been training on the wrong dataset for the last 48 hours."
+    },
+    {
+      "id": "story_02",
+      "prompt": "A middle school student struggles to carry a double bass case onto a crowded school bus without bumping into anyone."
+    },
+    {
+      "id": "story_03",
+      "prompt": "A grocery store clerk tries to keep a pyramid of slippery avocados from collapsing during the Saturday morning rush."
+    },
+    {
+      "id": "story_04",
+      "prompt": "A computer science major stays up all night trying to find a bug, only to realize a missing comma was breaking the code."
+    },
+    {
+      "id": "story_05",
+      "prompt": "A violinist realizes they forgot their rosin just minutes before a recital and has to ask around the orchestra to borrow some."
+    },
+    {
+      "id": "story_06",
+      "prompt": "A group of students spends the weekend manually labeling thousands of photos of cars and trucks for a computer vision project."
+    },
+    {
+      "id": "story_07",
+      "prompt": "A home cook cuts open a large, expensive avocado only to discover the pit is the size of a tennis ball."
+    },
+    {
+      "id": "story_08",
+      "prompt": "A data science student tries to cool down their overheating laptop with a small desk fan while running a heavy simulation."
+    },
+    {
+      "id": "story_09",
+      "prompt": "A beginner drummer practices on a rubber mute pad so they don't wake up their parents in the next room."
+    },
+    {
+      "id": "story_10",
+      "prompt": "A parent tries to convince a picky toddler that the green avocado mash on their toast is actually a delicious treat."
+    }
+  ]
+}
