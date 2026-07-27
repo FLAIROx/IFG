@@ -297,7 +297,7 @@ def main(cfg: IfgEvalConfig, dataset: Optional[datasets.Dataset] = None):
 
     if cfg.evaluator == "math":
         logging.info("Using MATH for evaluation")
-        solutions = dataset["solution"]
+        solutions = list(dataset["solution"])
         evaluation_fn = solve_and_eval_lib.is_correct_math
 
     elif cfg.evaluator == "true":
@@ -305,7 +305,7 @@ def main(cfg: IfgEvalConfig, dataset: Optional[datasets.Dataset] = None):
             "Using true for evaluation."
             "All generated solutions are assumed to be correct."
         )
-        solutions = dataset["solution"]
+        solutions = list(dataset["solution"])
         evaluation_fn = lambda *args, **kwargs: True
     else:
         raise ValueError()
@@ -314,7 +314,7 @@ def main(cfg: IfgEvalConfig, dataset: Optional[datasets.Dataset] = None):
     logging.info("Dataset %s", dataset)
     logging.info("Dataset size %d", len(dataset))
     logging.info("Dataset columns %s", dataset.column_names)
-    problems = dataset["problem"]
+    problems = list(dataset["problem"])
 
     with open(cfg.prompt_keywords_path) as f:
         if cfg.prompt_keywords_path.endswith(".json"):

@@ -1,0 +1,17 @@
+output_dir: /workspace/experiments/math_subset/qwen_2.5_7b/paraphrases
+prompt_keywords_path: hendrycks_math/prompts/paraphrase_prompt_math.txt
+num_paraphrases: 8
+model_type: base
+model: Qwen/Qwen2.5-7B
+temperature: 0.6
+dataset: ../data/ifg_verl/math_subset
+split: test
+separator: "###"
+solution_end: "Paraphrase:"
+seed: 42
+max_tokens: 1024
+engine: gllm
+gllm_host: http://localhost:8181
+gllm_load_model: true
+num_workers: 256
+log_every: 20

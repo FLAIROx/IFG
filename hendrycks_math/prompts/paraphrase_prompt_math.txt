@@ -1,0 +1,20 @@
+The following are maths questions and paraphrased versions of them. Each paraphrase keeps the exact mathematical meaning, all numbers, and the required answer format identical to the original, but rewords the sentences and phrasing. The examples are separated by ===.
+
+Question: If $g(x)=\sqrt[3]{{\frac{{x+3}}{{4}}}}$, for what value of $x$ will $g(2x)=2(g(x))$? Express your answer in simplest form.
+Paraphrase: Let $g(x)=\sqrt[3]{{\frac{{x+3}}{{4}}}}$. Find the value of $x$ for which $g(2x)$ is equal to twice $g(x)$, expressing your answer in its simplest form.
+###
+===
+Question: How many three-digit numbers are multiples of neither 5 nor 7?
+Paraphrase: Count how many three-digit integers are divisible by neither 7 nor 5.
+###
+===
+Question: Given that $\sec x + \tan x = \frac{{4}}{{3}},$ enter all possible values of $\sin x.$
+Paraphrase: Suppose $\sec x + \tan x = \frac{{4}}{{3}}$. List every possible value that $\sin x$ can take.
+###
+===
+Question: A fair 6-sided die is rolled.  What is the probability that the number rolled is a divisor of 6?
+Paraphrase: A fair six-sided die is thrown once. What is the probability that the number it lands on divides 6 evenly?
+###
+===
+Question: {question}
+Paraphrase:

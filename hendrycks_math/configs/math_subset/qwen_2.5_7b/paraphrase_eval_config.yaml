@@ -1,0 +1,17 @@
+output_dir: /workspace/experiments/math_subset/qwen_2.5_7b/paraphrase_eval
+paraphrases_path: /workspace/experiments/math_subset/qwen_2.5_7b/paraphrases/paraphrases.json
+num_paraphrases_to_use: 4
+prompt_keywords_path: hendrycks_math/prompts/ifg_prompt_math.txt
+model_type: base
+model: Qwen/Qwen2.5-7B
+global_temperature: 0.6
+separator: "###"
+solution_end: "\\boxed{"
+max_steps: 20
+max_tokens_per_step: 500
+engine: gllm
+gllm_host: http://localhost:8181
+gllm_load_model: true
+evaluator: math
+num_workers: 256
+log_every: 20

@@ -16,6 +16,8 @@ class Filenames(enum.StrEnum):
     REFERENCE_ANSWER = "ref_answers.json"
     REFERENCE_SOLUTIONS = "ref_solutions.json"
 
+    PARAPHRASES = "paraphrases.json"
+
 
 class GenJsonKeys(enum.StrEnum):
     """Record keys in the generation json file."""
@@ -25,6 +27,8 @@ class GenJsonKeys(enum.StrEnum):
     ATTEMPTS = "attempts"
     IS_CORRECT = "is_correct"
     PROMPT = "prompt"
+
+    PARAPHRASES = "paraphrases"
 
 
 class TrainingJsonKeys(enum.StrEnum):

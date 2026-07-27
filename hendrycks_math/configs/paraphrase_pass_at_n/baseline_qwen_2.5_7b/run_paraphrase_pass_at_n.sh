@@ -1,0 +1,2 @@
+python hendrycks_math/paraphrase_questions.py --yaml=hendrycks_math/configs/paraphrase_pass_at_n/baseline_qwen_2.5_7b/paraphrase_config.yaml
+python hendrycks_math/paraphrase_infer_and_score.py --yaml=hendrycks_math/configs/paraphrase_pass_at_n/baseline_qwen_2.5_7b/eval_config.yaml
